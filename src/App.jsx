@@ -14,6 +14,7 @@ import email from "./assets/img/email.svg"
 import address from "./assets/img/address.svg"
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { Link } from 'react-scroll';
 const App = () => {
 
   useEffect(() => {
@@ -28,11 +29,11 @@ const App = () => {
           <div className="d-flex flex-wrap align-items-center justify-content-between">
             <img src={logo} style={{ width: "60px", height: "60px" }} />
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="mailto:narminhikmat@gmail.com" className="nav-link px-2 text-light">narminhikmat@gmail.com</a></li>
-              <li><a href="#" className="nav-link px-2 text-light">Works</a></li>
-              <li><a href="#" className="nav-link px-2 text-light">Resume</a></li>
-              <li><a href="#" className="nav-link px-2 text-light">Skills</a></li>
-              <li><a href="#" className="nav-link px-2 text-light">Contact</a></li>
+              <li className='nav-item'><a href="mailto:narminhikmat@gmail.com" className="nav-link px-2 text-light">narminhikmat@gmail.com</a></li>
+              <li className='nav-item'><Link to="works" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Works</Link></li>
+              <li className='nav-item'><Link to="resume" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Resume</Link></li>
+              <li className='nav-item'><Link to="skills" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Skills</Link></li>
+              <li className='nav-item'><Link to="contact" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Contact</Link></li>
             </ul>
 
             <div className="dropdown text-end">
@@ -254,7 +255,7 @@ const App = () => {
                     <img src={phone} style={{ width: "50px", height: "50px" }} />
                     <div className='mx-2' style={{ minWidth: "200px" }}>
                       <p className='m-0 text-light'>Phone</p>
-                      <span className='phone text-light'>+994505154396</span>
+                      <span className='phone text-light'>+48453317797</span>
                     </div>
                   </div>
                   <div className='d-flex justify-content-center align-items-center mb-5'>
@@ -268,7 +269,7 @@ const App = () => {
                     <img src={address} style={{ width: "50px", height: "50px" }} />
                     <div className='mx-2' style={{ minWidth: "200px" }}>
                       <p className='m-0 text-light'>Address</p>
-                      <span className='phone text-light'>Baku, Azerbaijan</span>
+                      <span className='phone text-light'>Lublin, Poland</span>
                     </div>
                   </div>
                 </div>
