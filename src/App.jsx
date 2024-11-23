@@ -16,6 +16,9 @@ import Aos from "aos";
 import "aos/dist/aos.css"
 import { Link } from 'react-scroll';
 import Preloader from './components/Preloader';
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
+
 const App = () => {
 
   useEffect(() => {
@@ -28,14 +31,14 @@ const App = () => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 4000);
+    }, 1000);
   }, []);
 
   return (
     <>
 
       {loading ? <Preloader /> : <main className=''>
-        <header className="p-3">
+        <header className="p-3 header-one">
           <div className="container-fluid px-5">
             <div className="d-flex flex-wrap align-items-center justify-content-between">
               <img src={logo} style={{ width: "60px", height: "60px" }} />
@@ -51,6 +54,41 @@ const App = () => {
                 <button className='btn hire-me'>Hire me! </button>
               </div>
             </div>
+          </div>
+        </header>
+
+        <header className='header-two'>
+          <div className='container-fluid'>
+            <nav className="navbar bg-body-dark">
+                  <div>
+                    <img src={logo} style={{ width: "60px", height: "60px" }} />
+                  </div>
+
+                  <div>
+
+                    <button className='btn hire-me'>Hire me! </button>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
+                    <HiOutlineMenuAlt3 style={{color: "#ffffff", width: "50px", height:"50px"}}/>
+                    </button>
+                    <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex={-1} id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                      <div className="offcanvas-header">
+                        <h5 className="offcanvas-title text-light" id="offcanvasScrollingLabel">Menu</h5>
+                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                        </button>
+                      </div>
+                      <div className="offcanvas-body">
+                        <ul className='p-0'>
+                          <li className='nav-item border-bottom mb-4 text-light'><Link to="works" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Works</Link></li>
+                          <li className='nav-item border-bottom mb-4 text-light'><Link to="resume" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Resume</Link></li>
+                          <li className='nav-item border-bottom mb-4 text-light'><Link to="skills" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Skills</Link></li>
+                          <li className='nav-item border-bottom mb-4 text-light'><Link to="contact" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Contact</Link></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+            </nav>
+
           </div>
         </header>
         <section className='section-one mb-5'>
