@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from "./assets/img/logo.svg"
 import hello from "./assets/img/hello.svg"
 import myPhoto from "./assets/img/myPhoto.svg"
@@ -15,33 +15,44 @@ import address from "./assets/img/address.svg"
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { Link } from 'react-scroll';
+import Preloader from './components/Preloader';
 const App = () => {
 
   useEffect(() => {
     Aos.init();
-}, []);
+  }, []);
+
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 4000);
+  }, []);
+
   return (
     <>
 
-      <main className=''>
-      <header className="p-3">
-        <div className="container-fluid px-5">
-          <div className="d-flex flex-wrap align-items-center justify-content-between">
-            <img src={logo} style={{ width: "60px", height: "60px" }} />
-            <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li className='nav-item'><a href="mailto:narminhikmat@gmail.com" className="nav-link px-2 text-light">narminhikmat@gmail.com</a></li>
-              <li className='nav-item'><Link to="works" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Works</Link></li>
-              <li className='nav-item'><Link to="resume" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Resume</Link></li>
-              <li className='nav-item'><Link to="skills" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Skills</Link></li>
-              <li className='nav-item'><Link to="contact" spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Contact</Link></li>
-            </ul>
+      {loading ? <Preloader /> : <main className=''>
+        <header className="p-3">
+          <div className="container-fluid px-5">
+            <div className="d-flex flex-wrap align-items-center justify-content-between">
+              <img src={logo} style={{ width: "60px", height: "60px" }} />
+              <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li className='nav-item'><a href="mailto:narminhikmat@gmail.com" className="nav-link px-2 text-light">narminhikmat@gmail.com</a></li>
+                <li className='nav-item'><Link to="works" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Works</Link></li>
+                <li className='nav-item'><Link to="resume" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Resume</Link></li>
+                <li className='nav-item'><Link to="skills" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Skills</Link></li>
+                <li className='nav-item'><Link to="contact" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2 text-light">Contact</Link></li>
+              </ul>
 
-            <div className="dropdown text-end">
-              <button className='btn hire-me'>Hire me! </button>
+              <div className="dropdown text-end">
+                <button className='btn hire-me'>Hire me! </button>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
         <section className='section-one mb-5'>
           <div className='d-flex justify-content-center align-items-center hello'>
             <img src={hello} style={{ backgroundAttachment: "fixed" }} />
@@ -51,7 +62,7 @@ const App = () => {
               <div className="col-12 col-sm-6 col-md-6 col-lg-6">
                 <img src={myPhoto} className="d-block mx-lg-auto img-fluid myphoto" alt="Bootstrap Themes" style={{ width: "100%", height: "475px" }} />
               </div>
-              <div className="col-12 col-sm-6 col-md-6 col-lg-6 px-5"  data-aos="fade-right">
+              <div className="col-12 col-sm-6 col-md-6 col-lg-6 px-5" data-aos="fade-right">
                 <h1 className='fw-bold text-light'>I am Narmin</h1>
                 <h1 className="display-1 fw-bold mb-3 frontend">Front-end <br />Developer</h1>
                 <p className="lead" style={{ color: "#DDDDDD" }}>I break down complex user experinece problems to
@@ -105,7 +116,7 @@ const App = () => {
                     <div className='col-12 col-sm-6 col-md-10' data-aos="fade-right">
                       <div className="card">
                         <div className="card-body">
-                          <h4 className="card-title date">2024 April - present</h4>
+                          <h4 className="card-title date">2023 November - 2024 October</h4>
                           <h3 className="card-text profession">Junior Frontend Developer</h3>
                           <h5 className='company'>Webluna Software</h5>
                         </div>
@@ -115,9 +126,9 @@ const App = () => {
                     <div className='col-12 col-sm-6 col-md-10 mt-3' data-aos="fade-right">
                       <div className="card">
                         <div className="card-body">
-                          <h4 className="card-title date">2023 May - 2024 April</h4>
-                          <h3 className="card-text profession">Information Technolgy Assitant</h3>
-                          <h5 className='company'>IDEA</h5>
+                          <h4 className="card-title date">2023 May - 2023 October</h4>
+                          <h3 className="card-text profession">Junior Frontend Developer - Intern</h3>
+                          <h5 className='company'>Rawuser startup</h5>
                         </div>
                       </div>
 
@@ -126,7 +137,7 @@ const App = () => {
                       <div className="card">
                         <div className="card-body">
                           <h4 className="card-title date">2022 December - 2023 April</h4>
-                          <h3 className="card-text profession">Frontend Developer - Intern</h3>
+                          <h3 className="card-text profession">Junior Frontend Developer - Intern</h3>
                           <h5 className='company'>Ozun Oyren - startup</h5>
                         </div>
                       </div>
@@ -277,23 +288,24 @@ const App = () => {
             </div>
           </div>
         </section>
-        <footer style={{backgroundColor:"#140C1C"}}>
-        <div className="container">
-          <footer className="py-3">
-            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-              <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Services</a></li>
-              <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Work</a></li>
-              <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Skills</a></li>
-              <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Experience</a></li>
-            </ul>
-            <p className="text-center" style={{color:"#8750F7"}}>© 2024 All Rights Reserved by KhalidBabayev</p>
-          </footer>
-        </div>
+        <footer style={{ backgroundColor: "#140C1C" }}>
+          <div className="container">
+            <footer className="py-3">
+              <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Services</a></li>
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Work</a></li>
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Skills</a></li>
+                <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Experience</a></li>
+              </ul>
+              <p className="text-center" style={{ color: "#8750F7" }}>© 2024 All Rights Reserved by KhalidBabayev</p>
+            </footer>
+          </div>
 
-      </footer>
+        </footer>
       </main >
+      }
 
-      
+
 
     </>
   )
