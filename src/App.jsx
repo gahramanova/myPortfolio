@@ -129,7 +129,7 @@ const App = () => {
                   create integritiy focussed solutions that connect
                   billions of people</p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <a href={resume} download="Narmin Gahramanova Resume">
+                  <a href={resume} download="Narmin-Gahramanova Resume">
                     <button type="button" className="btn download-cv">Download CV <MdOutlineFileDownload style={{ width: "20px", height: "20px" }} />
                     </button>
                   </a>
