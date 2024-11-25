@@ -14,10 +14,11 @@ import email from "./assets/img/email.svg"
 import address from "./assets/img/address.svg"
 import Aos from "aos";
 import "aos/dist/aos.css"
-import { Link } from 'react-scroll';
 import Preloader from './components/Preloader';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { IoClose } from "react-icons/io5";
+import resume from "./assets/img/narmingahramanovaresume.pdf"
+import { Link } from 'react-scroll';
+
 
 const App = () => {
 
@@ -60,32 +61,32 @@ const App = () => {
         <header className='header-two'>
           <div className='container-fluid'>
             <nav className="navbar bg-body-dark">
-                  <div>
-                    <img src={logo} style={{ width: "60px", height: "60px" }} />
-                  </div>
+              <div>
+                <img src={logo} style={{ width: "60px", height: "60px" }} />
+              </div>
 
-                  <div>
+              <div>
 
-                    <button className='btn hire-me'>Hire me! </button>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
-                    <HiOutlineMenuAlt3 style={{color: "#ffffff", width: "50px", height:"50px"}}/>
+                <button className='btn hire-me'>Hire me! </button>
+                <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-expanded="false" aria-label="Toggle navigation">
+                  <HiOutlineMenuAlt3 style={{ color: "#ffffff", width: "50px", height: "50px" }} />
+                </button>
+                <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex={-1} id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                  <div className="offcanvas-header">
+                    <h5 className="offcanvas-title text-light" id="offcanvasScrollingLabel">Menu</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                     </button>
-                    <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex={-1} id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                      <div className="offcanvas-header">
-                        <h5 className="offcanvas-title text-light" id="offcanvasScrollingLabel">Menu</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                        </button>
-                      </div>
-                      <div className="offcanvas-body">
-                        <ul className='p-0'>
-                          <li className='nav-item border-bottom mb-4 text-light'><Link to="works" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Works</Link></li>
-                          <li className='nav-item border-bottom mb-4 text-light'><Link to="resume" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Resume</Link></li>
-                          <li className='nav-item border-bottom mb-4 text-light'><Link to="skills" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Skills</Link></li>
-                          <li className='nav-item border-bottom mb-4 text-light'><Link to="contact" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Contact</Link></li>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
+                  <div className="offcanvas-body">
+                    <ul className='p-0'>
+                      <li className='nav-item border-bottom mb-4 text-light'><Link to="works" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Works</Link></li>
+                      <li className='nav-item border-bottom mb-4 text-light'><Link to="resume" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Resume</Link></li>
+                      <li className='nav-item border-bottom mb-4 text-light'><Link to="skills" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Skills</Link></li>
+                      <li className='nav-item border-bottom mb-4 text-light'><Link to="contact" activeClass='active' spy={true} smooth={true} offset={-150} duration={500} className="nav-link px-2">Contact</Link></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
             </nav>
 
@@ -107,11 +108,18 @@ const App = () => {
                   create integritiy focussed solutions that connect
                   billions of people</p>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" className="btn download-cv">Download CV <MdOutlineFileDownload style={{ width: "20px", height: "20px" }} />
-                  </button>
+                  <a href={resume} download="Narmin Gahramanova Resume">
+                    <button type="button" className="btn download-cv">Download CV <MdOutlineFileDownload style={{ width: "20px", height: "20px" }} />
+                    </button>
+                  </a>
                   <button className='btn icons'><RiFacebookFill /></button>
-                  <button className='btn icons'><FaLinkedinIn /></button>
-                  <button className='btn icons'><FaGithub /></button>
+                  <a href="https://www.linkedin.com/in/narmin-gahramanova-a6478a234/" target='_blank'>
+                    <button className='btn icons'><FaLinkedinIn /></button>
+                  </a>
+
+                  <a href='https://github.com/gahramanova' target='_blank' >
+                    <button className='btn icons'><FaGithub /></button>
+                  </a>
 
                 </div>
               </div>
