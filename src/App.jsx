@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import logo from "./assets/img/logo.svg"
 import hello from "./assets/img/hello.svg"
 import myPhoto from "./assets/img/myPhoto.svg"
@@ -18,9 +18,30 @@ import Preloader from './components/Preloader';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import resume from "./assets/img/narmingahramanovaresume.pdf"
 import { Link } from 'react-scroll';
+import emailjs from '@emailjs/browser';
 
 
 const App = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_vlqnrm6', 'template_zdvelp1', form.current, {
+        publicKey: 'IvPidmPRkNf3dl1qX',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
   useEffect(() => {
     Aos.init();
@@ -112,7 +133,10 @@ const App = () => {
                     <button type="button" className="btn download-cv">Download CV <MdOutlineFileDownload style={{ width: "20px", height: "20px" }} />
                     </button>
                   </a>
-                  <button className='btn icons'><RiFacebookFill /></button>
+                  <a href='https://www.facebook.com/profile.php?id=100089687614748&mibextid=ZbWKwL' target='_blank'>
+                    <button className='btn icons'><RiFacebookFill /></button>
+                  </a>
+
                   <a href="https://www.linkedin.com/in/narmin-gahramanova-a6478a234/" target='_blank'>
                     <button className='btn icons'><FaLinkedinIn /></button>
                   </a>
@@ -247,7 +271,7 @@ const App = () => {
                     <h6 style={{ color: "#DDDDDD" }}>I design and code beautifully simple things and i love what i do.
                       Just simple like that!</h6>
 
-                    <form className='py-4 mt-4'>
+                    <form className='py-4 mt-4' ref={form} onSubmit={sendEmail}>
                       <div className='row'>
                         <div className='col-12 col-sm-12 col-md-6'>
                           <div className='py-3 mb-3'>
@@ -256,7 +280,7 @@ const App = () => {
                               type='text'
                               name='name'
                               placeholder="First Name"
-
+                       
                             />
                           </div>
                         </div>
