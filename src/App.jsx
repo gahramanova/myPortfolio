@@ -159,7 +159,7 @@ const App = () => {
                   <a href="https://webluna.org/" target='_blank'>
                     <img src={webluna} style={{ width: "100%", objectFit:"contain" }} />
                     <div className='title'>
-                      <h4 className='m-0'>StreamVibe movie</h4>
+                      <h4 className='m-0'>Webluna Sofware</h4>
                       <p className='m-0'>Project was about presicion and information...</p>
                     </div>
                   </a>
@@ -171,7 +171,7 @@ const App = () => {
                   <a href=''>
                     <img src={gulcu} style={{ width: "100%", objectFit:"contain" }} />
                     <div className='title'>
-                      <h4 className='m-0'>StreamVibe movie</h4>
+                      <h4 className='m-0'>Gülçü.az</h4>
                       <p className='m-0'>Project was about presicion and information...</p>
                     </div>
                   </a>
