@@ -157,7 +157,11 @@ const App = () => {
 
                 <div className='project '>
                   <a href="https://webluna.org/" target='_blank'>
-                    <img src={webluna} style={{ width: "100%", height: "100%" }} />
+                    <img src={webluna} style={{ width: "100%", objectFit:"contain" }} />
+                    <div className='title'>
+                      <h4 className='m-0'>StreamVibe movie</h4>
+                      <p className='m-0'>Project was about presicion and information...</p>
+                    </div>
                   </a>
                 </div>
 
@@ -165,14 +169,22 @@ const App = () => {
               <div className='col-12 col-sm-6 col-md-6'>
                 <div className='project'>
                   <a href=''>
-                    <img src={gulcu} style={{ width: "100%", height: "100%" }} />
+                    <img src={gulcu} style={{ width: "100%", objectFit:"contain" }} />
+                    <div className='title'>
+                      <h4 className='m-0'>StreamVibe movie</h4>
+                      <p className='m-0'>Project was about presicion and information...</p>
+                    </div>
                   </a>
                 </div>
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
                 <div className='project'>
                 <a href="https://streamvibe-beta.vercel.app/" target='_blank'>
-                    <img src={streamvibe} style={{ width: "100%", height: "100%" }} />
+                    <img src={streamvibe} style={{ width: "100%", objectFit:"contain" }} />
+                    <div className='title'>
+                      <h4 className='m-0'>StreamVibe movie</h4>
+                      <p className='m-0'>Project was about presicion and information...</p>
+                    </div>
                   </a>
                 </div>
               </div>
