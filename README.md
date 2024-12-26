@@ -1,5 +1,7 @@
 🌐 Portfolio Website
-Welcome to my Portfolio Website! This platform highlights my journey, skills, and projects as a frontend developer. Designed with creativity and functionality in mind, it serves as a digital space to showcase my professional work and personal achievements.
+Welcome to my Portfolio Website! 
+
+This platform highlights my journey, skills, and projects as a frontend developer. Designed with creativity and functionality in mind, it serves as a digital space to showcase my professional work and personal achievements.
 
 🌟 Features
 Project Showcase: Displays my key projects with descriptions, technologies used, and live demo links.
