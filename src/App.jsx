@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import webluna from "./assets/img/webluna.png"
 import gulcu from "./assets/img/gulcu.png"
+import streamvibe from "./assets/img/streamvibe.png"
 import CarouselSkills from './components/CarouselSkills';
 import phone from "./assets/img/phone.svg"
 import email from "./assets/img/email.svg"
@@ -169,7 +170,11 @@ const App = () => {
                 </div>
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
-                <div className='project'></div>
+                <div className='project'>
+                <a href="https://streamvibe-beta.vercel.app/" target='_blank'>
+                    <img src={streamvibe} style={{ width: "100%", height: "100%" }} />
+                  </a>
+                </div>
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
                 <div className='project'></div>
