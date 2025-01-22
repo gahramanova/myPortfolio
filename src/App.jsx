@@ -168,7 +168,7 @@ const App = () => {
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
                 <div className='project'>
-                  <a href=''>
+                  <a href='https://gulcu.az/'>
                     <img src={gulcu} style={{ width: "100%", objectFit:"contain" }} />
                     <div className='title'>
                       <h4 className='m-0'>Gülçü.az</h4>
