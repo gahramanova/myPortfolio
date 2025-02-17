@@ -9,6 +9,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import webluna from "./assets/img/webluna.png"
 import gulcu from "./assets/img/gulcu.png"
 import streamvibe from "./assets/img/streamvibe.png"
+import petpal from "./assets/img/petpal.png"
 import CarouselSkills from './components/CarouselSkills';
 import phone from "./assets/img/phone.svg"
 import email from "./assets/img/email.svg"
@@ -189,7 +190,14 @@ const App = () => {
                 </div>
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
-                <div className='project'></div>
+                <div className='project'>
+                <a href="https://petpal-gamma.vercel.app/" target='_blank'>
+                    <img src={petpal} style={{ width: "100%", objectFit:"contain" }} />
+                    <div className='title'>
+                      <h4 className='m-0'>Petpal-Animal Care</h4>
+                      <p className='m-0'>Project was about presicion and information...</p>
+                    </div>
+                  </a></div>
               </div>
             </div>
           </div>
