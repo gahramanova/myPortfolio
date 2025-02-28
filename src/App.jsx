@@ -392,7 +392,7 @@ const App = () => {
                 <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Skills</a></li>
                 <li className="nav-item"><a href="#" className="nav-link px-2 text-light">Experience</a></li>
               </ul>
-              <p className="text-center" style={{ color: "#8750F7" }}>© 2024 All Rights Reserved by KhalidBabayev</p>
+              <p className="text-center" style={{ color: "#8750F7" }}>© {new Date().getFullYear()} All Rights Reserved by KhalidBabayev</p>
             </footer>
           </div>
 
