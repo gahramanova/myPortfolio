@@ -15,7 +15,7 @@ const CarouselSkills = () => {
         { name: 'Java Script', logo: javascript, percentage: "90%" },
         { name: 'React', logo: react, percentage: "90%" },
         { name: 'Typescript', logo: typescript, percentage: "80%" },
-        { name: 'Redux', logo: redux, percentage: "70%" },
+        { name: 'Redux', logo: redux, percentage: "65%" },
         { name: 'Html', logo: html, percentage: "100%" },
         { name: 'Sass', logo: sass, percentage: "900%" },
         { name: 'Material-Ui', logo: materialUi, percentage: "90%" },
