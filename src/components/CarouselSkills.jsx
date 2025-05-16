@@ -6,21 +6,27 @@ import sass from "../assets/img/sass.svg"
 import typescript from "../assets/img/typescript.svg"
 import redux from "../assets/img/redux.svg"
 import html from "../assets/img/html.svg"
+import tailwind from "../assets/img/tailwindCss.png"
+import materialUi from "../assets/img/materialUi.svg"
+import bootstrap from "../assets/img/bootstrap.png"
 
 const CarouselSkills = () => {
     const technologies = [
-        { name: 'Sass', logo: sass, percentage: "90%" },
-        { name: 'Java Script', logo: javascript, percentage: "80%" },
-        { name: 'React', logo: react, percentage: "80%" },
-        { name: 'Redux', logo: redux, percentage: "60%" },
-        { name: 'Typescript', logo: typescript, percentage: "70%" },
-        { name: 'Html', logo: html, percentage: "100%" }
+        { name: 'Java Script', logo: javascript, percentage: "90%" },
+        { name: 'React', logo: react, percentage: "90%" },
+        { name: 'Typescript', logo: typescript, percentage: "80%" },
+        { name: 'Redux', logo: redux, percentage: "70%" },
+        { name: 'Html', logo: html, percentage: "100%" },
+        { name: 'Sass', logo: sass, percentage: "900%" },
+        { name: 'Material-Ui', logo: materialUi, percentage: "90%" },
+        { name: 'Bootstrap 5', logo: bootstrap, percentage: "900%" },
+        { name: 'Tailwind CSS', logo: tailwind, percentage: "90%" }
     ];
 
     var settings = {
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         speed: 500,
         arrows: true,
         accessibility: true,

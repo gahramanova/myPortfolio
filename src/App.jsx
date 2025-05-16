@@ -9,7 +9,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import webluna from "./assets/img/webluna.png"
 import gulcu from "./assets/img/gulcu.png"
 import streamvibe from "./assets/img/streamvibe.png"
-import perspektiv from "./assets/img/perspektivAZ.png"
+import petpal from "./assets/img/petpal.png"
 import CarouselSkills from './components/CarouselSkills';
 import phone from "./assets/img/phone.svg"
 import email from "./assets/img/email.svg"
@@ -21,6 +21,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import resume from "./assets/img/narmingahramanovaresume.pdf"
 import { Link } from 'react-scroll';
 import emailjs from '@emailjs/browser';
+import Typical from 'react-typical';
 
 
 const App = () => {
@@ -121,12 +122,20 @@ const App = () => {
           </div>
           <div className="container-fluid px-5 py-5">
             <div className="row flex-lg-row-reverse g-5 py-5">
-              <div className="col-12 col-sm-6 col-md-6 col-lg-6">
-                <img src={myPhoto} className="d-block mx-lg-auto img-fluid myphoto" alt="Bootstrap Themes" style={{ width: "100%", height: "475px" }} />
+              <div className="col-12 col-sm-6 col-md-6 col-lg-6" data-aos="fade-left">
+                <img src={myPhoto} className="d-block mx-lg-auto img-fluid myphoto" alt="Bootstrap Themes" style={{ width: "100%", height: "475px", marginTop:"-30px" }} />
               </div>
-              <div className="col-12 col-sm-6 col-md-6 col-lg-6 px-5" data-aos="fade-right">
-                <h1 className='fw-bold text-light'>I am Narmin</h1>
-                <h1 className="display-1 fw-bold mb-3 frontend">Front-end <br />Developer</h1>
+              <div className="col-12 col-sm-6 col-md-6 col-lg-6 px-5">
+                <h1 className='fw-bold text-light'>
+                 I am Narmin
+                </h1>
+                <h1 className="display-1 fw-bold mb-3 frontend">
+                  <Typical
+                    steps={['Front-end', 500, 'Front-end Developer', 3000]}
+                    loop={Infinity}
+                    wrapper="p"
+                  />
+                </h1>
                 <p className="lead" style={{ color: "#DDDDDD" }}>I break down complex user experinece problems to
                   create integritiy focussed solutions that connect
                   billions of people</p>
@@ -157,48 +166,49 @@ const App = () => {
               <div className='col-12 col-sm-6 col-md-6 '>
 
                 <div className='project '>
-                  <a href="https://webluna.org/" target='_blank'>
-                    <img src={webluna} style={{ width: "100%", objectFit:"contain" }} />
+                  <a href="https://petpal-kappa.vercel.app" target='_blank'>
+                    <img src={petpal} style={{ width: "100%", objectFit: "contain" }} />
                     <div className='title'>
-                      <h4 className='m-0'>Webluna Sofware</h4>
+                      <h4 className='m-0'>Petpal - petcare</h4>
                       <p className='m-0'>Project was about presicion and information...</p>
-                    </div>
+                    </div>
                   </a>
                 </div>
 
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
                 <div className='project'>
-                  <a href='https://gulcu.az/'>
-                    <img src={gulcu} style={{ width: "100%", objectFit:"contain" }} />
+                  <a href='https://gulcu.az/' target='_blank'>
+                    <img src={gulcu} style={{ width: "100%", objectFit: "contain" }} />
                     <div className='title'>
                       <h4 className='m-0'>Gülçü.az</h4>
                       <p className='m-0'>Project was about presicion and information...</p>
-                    </div>
+                    </div>
                   </a>
                 </div>
               </div>
               <div className='col-12 col-sm-6 col-md-6'>
                 <div className='project'>
-                <a href="https://streamvibe-beta.vercel.app/" target='_blank'>
-                    <img src={streamvibe} style={{ width: "100%", objectFit:"contain" }} />
+                  <a href="https://webluna.org/" target='_blank'>
+                    <img src={webluna} style={{ width: "100%", objectFit: "contain" }} />
+                    <div className='title'>
+                      <h4 className='m-0'>Webluna Sofware</h4>
+                      <p className='m-0'>Project was about presicion and information...</p>
+                    </div>
+                  </a></div>
+              </div>
+              <div className='col-12 col-sm-6 col-md-6'>
+                <div className='project'>
+                  <a href="https://streamvibe-beta.vercel.app/" target='_blank'>
+                    <img src={streamvibe} style={{ width: "100%", objectFit: "contain" }} />
                     <div className='title'>
                       <h4 className='m-0'>StreamVibe movie</h4>
                       <p className='m-0'>Project was about presicion and information...</p>
-                    </div>
+                    </div>
                   </a>
                 </div>
               </div>
-              <div className='col-12 col-sm-6 col-md-6'>
-                <div className='project'>
-                <a href="https://perspektiv.az/" target='_blank'>
-                    <img src={perspektiv} style={{ width: "100%", objectFit:"contain" }} />
-                    <div className='title'>
-                      <h4 className='m-0'>Perspektiv.az</h4>
-                      <p className='m-0'>Project was about presicion and information...</p>
-                    </div>
-                  </a></div>
-              </div>
+              
             </div>
           </div>
 
@@ -305,7 +315,7 @@ const App = () => {
                               type='text'
                               name='name'
                               placeholder="First Name"
-                       
+
                             />
                           </div>
                         </div>

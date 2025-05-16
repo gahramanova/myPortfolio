@@ -17,6 +17,14 @@ header {
         background: linear-gradient(to right, #8750F7, #2A1454);
         width: 100% !important;
     }
+
+    ul li a{
+        cursor: pointer;
+
+        &:hover {
+            color: #8750F7 !important;
+    }
+    }
 }
 
 @media (max-width: 980px) {
