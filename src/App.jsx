@@ -131,7 +131,8 @@ const App = () => {
                 </h1>
                 <h1 className="display-1 fw-bold mb-3 frontend">
                   <Typewriter
-                    words={[ 'Front-end Developer']}
+                    words={[
+                       'Front-end Developer']}
                     loop={Infinity}
                     cursor
                     cursorStyle='_'
