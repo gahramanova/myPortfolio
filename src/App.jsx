@@ -21,7 +21,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import resume from "./assets/img/narmingahramanovaresume.pdf"
 import { Link } from 'react-scroll';
 import emailjs from '@emailjs/browser';
-import Typical from 'react-typical';
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const App = () => {
@@ -123,17 +123,21 @@ const App = () => {
           <div className="container-fluid px-5 py-5">
             <div className="row flex-lg-row-reverse g-5 py-5">
               <div className="col-12 col-sm-6 col-md-6 col-lg-6" data-aos="fade-left">
-                <img src={myPhoto} className="d-block mx-lg-auto img-fluid myphoto" alt="Bootstrap Themes" style={{ width: "100%", height: "475px", marginTop:"-30px" }} />
+                <img src={myPhoto} className="d-block mx-lg-auto img-fluid myphoto" alt="Bootstrap Themes" style={{ width: "100%", height: "475px", marginTop: "-30px" }} />
               </div>
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 px-5">
                 <h1 className='fw-bold text-light'>
-                 I am Narmin
+                  I am Narmin
                 </h1>
                 <h1 className="display-1 fw-bold mb-3 frontend">
-                  <Typical
-                    steps={['Front-end', 500, 'Front-end Developer', 3000]}
+                  <Typewriter
+                    words={[ 'Front-end Developer']}
                     loop={Infinity}
-                    wrapper="p"
+                    cursor
+                    cursorStyle='_'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
                   />
                 </h1>
                 <p className="lead" style={{ color: "#DDDDDD" }}>I break down complex user experinece problems to
@@ -208,7 +212,7 @@ const App = () => {
                   </a>
                 </div>
               </div>
-              
+
             </div>
           </div>
 
