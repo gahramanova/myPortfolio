@@ -226,29 +226,30 @@ const App = () => {
                     <div className='col-12 col-sm-6 col-md-10' data-aos="fade-right">
                       <div className="card">
                         <div className="card-body">
-                          <h4 className="card-title date">2023 January - 2024 October</h4>
+                          <h4 className="card-title date">2025 Feburary - Present</h4>
+                          <h3 className="card-text profession">Junior Frontend Developer</h3>
+                          <h5 className='company'>Perspektiv.az</h5>
+                        </div>
+                      </div>
+
+                    </div>
+                  
+                    <div className='col-12 col-sm-6 col-md-10 mt-3' data-aos="fade-right">
+                      <div className="card">
+                        <div className="card-body">
+                          <h4 className="card-title date">2022 October - 2024 August</h4>
                           <h3 className="card-text profession">Junior Frontend Developer</h3>
                           <h5 className='company'>Webluna Software Company</h5>
                         </div>
                       </div>
 
                     </div>
-                    <div className='col-12 col-sm-6 col-md-10 mt-3' data-aos="fade-right">
+                      <div className='col-12 col-sm-6 col-md-10 mt-3' data-aos="fade-right">
                       <div className="card">
                         <div className="card-body">
                           <h4 className="card-title date">2022 October - 2022 December</h4>
                           <h3 className="card-text profession">Junior Frontend Developer - Intern</h3>
                           <h5 className='company'>OzunOyren startup</h5>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className='col-12 col-sm-6 col-md-10 mt-3' data-aos="fade-right">
-                      <div className="card">
-                        <div className="card-body">
-                          <h4 className="card-title date">2022 April - 2022 July</h4>
-                          <h3 className="card-text profession">Junior Frontend Developer - Intern</h3>
-                          <h5 className='company'>Webluna Software Company</h5>
                         </div>
                       </div>
 
